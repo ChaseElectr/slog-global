@@ -58,31 +58,31 @@ pub fn clear_global() {
 
 /// Logs a critical level message using the global logger.
 #[macro_export]
-macro_rules! crit( ($($args:tt)+) => {
+macro_rules! slog_global_crit( ($($args:tt)+) => {
     ::slog::slog_crit![$crate::borrow_global(), $($args)+]
 };);
 /// Logs a error level message using the global logger.
 #[macro_export]
-macro_rules! error( ($($args:tt)+) => {
+macro_rules! slog_global_error( ($($args:tt)+) => {
     ::slog::slog_error![$crate::borrow_global(), $($args)+]
 };);
 /// Logs a warning level message using the global logger.
 #[macro_export]
-macro_rules! warn( ($($args:tt)+) => {
+macro_rules! slog_global_warn( ($($args:tt)+) => {
     ::slog::slog_warn![$crate::borrow_global(), $($args)+]
 };);
 /// Logs a info level message using the global logger.
 #[macro_export]
-macro_rules! info( ($($args:tt)+) => {
+macro_rules! slog_global_info( ($($args:tt)+) => {
     ::slog::slog_info![$crate::borrow_global(), $($args)+]
 };);
 /// Logs a debug level message using the global logger.
 #[macro_export]
-macro_rules! debug( ($($args:tt)+) => {
+macro_rules! slog_global_debug( ($($args:tt)+) => {
     ::slog::slog_debug![$crate::borrow_global(), $($args)+]
 };);
 /// Logs a trace level message using the global logger.
 #[macro_export]
-macro_rules! trace( ($($args:tt)+) => {
+macro_rules! slog_global_trace( ($($args:tt)+) => {
     ::slog::slog_trace![$crate::borrow_global(), $($args)+]
 };);
